@@ -1,0 +1,10 @@
+@mixin flex($rowCol, $align, $justify) {
+    display: flex;
+    flex-direction: $rowCol;
+    align-items: $align;
+    justify-content: $justify;
+  }
+  
+  @mixin box-shadow{
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  }

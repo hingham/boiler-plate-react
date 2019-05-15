@@ -1,0 +1,17 @@
+#root{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    header, footer{
+        @include flex(row, center, center);
+        background: $gray;
+    }
+    >div{
+        @include flex(row, center, center);
+        flex: 1;
+        // background: $gray;
+    }
+}
+
