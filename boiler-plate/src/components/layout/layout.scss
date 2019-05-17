@@ -4,13 +4,21 @@
     flex-direction: column;
     align-content: center;
     justify-content: center;
+    margin-left: 12.5px;
+    margin-right: 12.5px;
     header, footer{
         @include flex(row, center, center);
         background: $gray;
     }
     >div{
-        @include flex(row, center, center);
+        display: flex;
+        @include flex(row, start, space-around);
+        flex-wrap: wrap;
         flex: 1;
+        width: 100%;
+        // padding: 12.5px;
+    
+        // margin: 12.5px;
         // background: $gray;
     }
 }

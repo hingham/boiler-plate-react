@@ -11,12 +11,36 @@ class Card extends Component {
   }
 
   render() {
-    return (
-      <div class="card">
-        <button onClick={() => this.props.test()}>test</button>
-        <div>{this.props.data.hello}</div>
-      </div>
-    );
+    if(this.props.place === "left"){
+        return (
+          <div class="card">
+            <button onClick={() => this.props.test()}>test</button>
+            <div>{this.props.content}</div>
+            <div onClick={(e)=>this.props.moveCardRight(e)}> &#x2192;</div>
+          </div>
+        );
+    }
+    else if(this.props.place === "middle"){
+        return (
+            <div class="card">
+            <div onClick={(e)=>this.props.moveCardLeft(e)}> &#x2190; </div>
+              <button onClick={() => this.props.test()}>test</button>
+              <div>{this.props.content}</div>
+              <div onClick={(e)=>this.props.moveCardRight(e)}> &#x2192;</div>
+      
+            </div>
+          ); 
+    }
+    else{
+        return (
+            <div class="card">
+            <div onClick={(e)=>this.props.moveCardLeft(e)}> &#x2190; </div>
+              <button onClick={() => this.props.test()}>test</button>
+              <div>{this.props.content}</div>
+      
+            </div>
+          ); 
+    }
   }
 }
 
